@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- My style CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo"></div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main" id="main">
+    <div class="main__container">
+        <div class="img__content"></div>
+
+        <div class="main__article">
+            <h1 class="main__title"><span>We're</span> coming soon</h1>
+            <span class="main__description">Hello fellow shoppers! We're currently building our new fashion store. 
+            Add your email below to stay up-to-date with announcements and our launch deals.</span>
+            
+            <div>
+              <div class="email__box">
+                <form class="form" action="#" id="form">
+                  <div class="inputBox">
+                    <input type="text" onkeydown="validation()" placeholder="Email address" class="email" id="email"> 
+                  </div>
+                  <div class="alert__icon" id="alert__icon"></div>
+                </form>
+                
+                <div class="button__icon-bx" id="pass-slide">
+                  <div class="button__icon"></div>
+                </div> 
+              </div>
+              <span class="text" id="text"></span>
+            </div>
+        </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Dwi susilo</a>.
+    </p>
+  </footer>
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

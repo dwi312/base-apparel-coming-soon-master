@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+
+:root
+{
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    /* ### Neutral */
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    /* ### Gradients */
+
+    --color-sa: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --color-sn: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --Font-size: 16px;
+    --f1: 300;
+    --f2: 400;
+    --f3: 600;
+
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans';
+}
+body
+{
+    background: var(--color-sa);
+}
+h1,h2,h3, span
+{
+    font-weight: var(--f2);
+}
+
+span
+{
+    color: var(--Desaturated-Red);
+}
+
+.header__logo
+    {
+        width: 158px;
+        height: 33px;
+        background: url(../images/logo.svg);
+    }
+
+@media screen and (max-width: 512px)
+{
+    /* Header */
+    .header
+    {
+        width: max-content;
+        /* position: fixed; */
+        height: auto;
+    }
+    .header__container
+    {
+        padding: 30px;
+    }
+
+    /* Main */
+    .main
+    {
+        width: 375px;
+        height: 100vh;
+    }
+    .main__container
+    {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 65px;
+    }
+    .img__content
+    {
+        width: 100%;
+        height: 250px;
+        background: url(../images/hero-mobile.jpg);
+    }
+}
+
+.main__article
+{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    row-gap: 25px;
+    padding: 0 40px;
+}
+.main__title
+{
+    height: 115px;
+    text-transform: uppercase;
+    font-weight: var(--f3);
+    letter-spacing: 5px;
+    text-align: center;
+    color: var(--Dark-Grayish-Red);
+}
+.main__title span
+{
+    font-weight: 300;
+}
+
+.main__description
+{
+    text-indent: 5px;
+    text-align: center;
+    font-size: 12.9px;
+    line-height: 25px;
+}
+
+.text
+{
+    position: relative;
+    color: red;
+    font-size: 13px;
+    left: 30px;
+    bottom: 10px;
+}
+.alert__icon
+{
+    height: 50px;
+    background: url(../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+}
+.email__box
+{
+    display: grid;
+}
+
+.form
+{
+    position: relative;
+    width: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid var(--Soft-Red);
+    border-radius: 30px;
+    align-items: center;
+}
+.form .email
+{
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: var(--Font-size);
+    
+}
+
+.form .inputBox
+{
+    position: relative;
+}
+.email::-webkit-input-placeholder
+{
+    color: var(--Desaturated-Red);
+    font-size: var(--Font-size);
+    opacity: .5;
+}
+
+.button__icon-bx
+{
+    position: absolute;
+    right: 40px;
+    width: 75px;
+    height: 40px;
+    background: var(--color-sn);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.button__icon
+{
+    height: 40px;
+    background: url(../images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+.attribution
+{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+.attribution,
+.attribution a
+{
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+    font-size: 11px; 
+    text-align: center;
+}
+
+
+@media screen and (min-width: 425px)
+{
+    .main
+    {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    .header
+    {
+        position: absolute;
+        left: 165px;
+        top: 65px;
+    }
+    .main
+    {
+        width: 1440px;
+        height: 800px;
+    }
+    .main__container
+    {
+        display: grid;
+        grid-template-columns: 830px 610px;
+    }
+    .img__content
+    {
+        order: 2;
+        height: 800px;
+        background: url(../images/hero-desktop.jpg);
+    }
+    .main__article
+    {
+        background: url(../images/bg-pattern-desktop.svg);
+        background-position: left;
+        background-size: cover;
+        padding: 0;
+        row-gap: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__title,
+    .main__description,
+    .email__box
+    {
+        position: relative;
+        width: 445px;
+        left: 165px;
+    }
+    .main__title
+    {
+        height: auto;   
+        font-size: 55px;
+        text-align: start;
+        letter-spacing: 10px;
+        word-spacing: 300px;
+    }
+    .main__description
+    {
+        font-size: 16px;
+        text-align: start;
+        text-indent: 0;
+        margin: 40px 0 50px;
+    }
+    .main__article div
+    {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        row-gap: 5px;
+    }
+    .button__icon-bx
+    {
+        right: 0;
+    }
+    .form
+    {
+        justify-content: space-between;
+    }
+    .form .inputBox
+    {
+        margin-left: 20px;
+        font-size: 16px;
+        transition: .4s;
+    }
+
+    .alert__icon
+    {
+        margin-right: 35px;
+    }
+    .text
+    {
+        left: 165px;
+        margin-left: 20px;
+        font-size: 16px;
+        bottom: 0;
+    }
+}
