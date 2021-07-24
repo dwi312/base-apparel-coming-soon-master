@@ -149,7 +149,7 @@ span
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border: 1px solid var(--Soft-Red);
+    border: 2px solid rgba(255, 0, 0, 0.185);
     border-radius: 30px;
     align-items: center;
 }
@@ -193,10 +193,6 @@ span
     background-position: center;
 }
 
-
-
-
-
 .attribution
 {
     position: absolute;
@@ -211,15 +207,98 @@ span
     color: hsl(228, 45%, 44%);
     font-size: 11px; 
     text-align: center;
+
 }
 
 
-@media screen and (min-width: 425px)
+@media screen and (min-width: 513px)
 {
+    .header
+    {
+        position: absolute;
+        left: 117px;
+        top: 40px;
+
+    }
     .main
     {
+        position: relative;
+        top: 100px;
+        max-width: 600px;
         margin: 0 auto;
     }
+    .main__container
+    {
+        display: grid;
+        row-gap: 50px;
+    }
+    .img__content
+    {
+        width: 600px;
+        height: 500px;
+        background: url(../images/hero-desktop.jpg);
+    }
+    .main__article
+    {
+        row-gap: 40px;
+        padding: 0;
+    }
+    .main__title
+    {
+        height: auto;
+        font-size: 40px;
+        letter-spacing: 10px;
+        word-spacing: 250px;
+        text-align: left;
+    }
+    .main__description
+    {
+        font-size: var(--Font-size);
+        text-align: center;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+    .form
+    {
+        width: 550px;
+        height: 70px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form .inputBox
+    {
+        margin: 0 25px;
+        font-size: var(--Font-size);
+        height: 40px;
+        line-height: 40px;
+    }
+    .alert__icon
+    {
+        position: relative;
+        right: 50px;
+    }
+    .button__icon-bx
+    {
+        height: 73px;
+        width: 85px;
+        right: 25px;
+    }
+    .button__icon
+    {
+        height: 73px;
+    }
+    .text
+    {
+        position: relative;
+        font-size: 16px;
+        letter-spacing: 1px;
+        bottom: -10px;
+        margin-left: 50px;
+    }
+
+    
+
 }
 
 @media screen and (min-width: 1024px)
@@ -232,8 +311,11 @@ span
     }
     .main
     {
-        width: 1440px;
+        max-width: 1440px;
         height: 800px;
+        position: static;
+        top: 0;
+        margin: 0;
     }
     .main__container
     {
@@ -258,11 +340,10 @@ span
         justify-content: center;
     }
     .main__title,
-    .main__description,
-    .email__box
+    .main__description
     {
         position: relative;
-        width: 445px;
+        width: 480px;
         left: 165px;
     }
     .main__title
@@ -270,15 +351,17 @@ span
         height: auto;   
         font-size: 55px;
         text-align: start;
-        letter-spacing: 10px;
+        letter-spacing: 20px;
         word-spacing: 300px;
     }
     .main__description
     {
-        font-size: 16px;
-        text-align: start;
+        text-align: left;
         text-indent: 0;
         margin: 40px 0 50px;
+        letter-spacing: .5px;
+        line-height: 25px;
+        font-size: var(--Font-size);
     }
     .main__article div
     {
@@ -286,24 +369,44 @@ span
         grid-template-rows: 1fr auto;
         row-gap: 5px;
     }
-    .button__icon-bx
+    .email__box .button__icon-bx
     {
-        right: 0;
+        position: relative;
+        height: 52px;
+        margin-right: 50px;
+        box-shadow: 0 10px 15px rgba(150, 8, 8, 0.603);
+    }
+    .button__icon-bx .button__icon
+    {
+        height: 50px;
     }
     .form
     {
         justify-content: space-between;
+        align-items: center;
+        width: 480px;
+        margin: 0;
+        left: 165px;
+        height: 50px;
     }
     .form .inputBox
     {
-        margin-left: 20px;
-        font-size: 16px;
+        margin: 0;
         transition: .4s;
+        display: flex;
+        align-items: center;
     }
-
-    .alert__icon
+    div .email__box
     {
-        margin-right: 35px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    .form .email
+    {
+        align-items: center;
+        width: 400px;
+        background: transparent;
+        text-indent: 50px;
     }
     .text
     {
@@ -312,4 +415,21 @@ span
         font-size: 16px;
         bottom: 0;
     }
+    .attribution
+    {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+    }
+    .attribution,
+    .attribution a
+    {
+        text-decoration: none;
+        color: hsl(228, 45%, 44%);
+        font-size: 11px; 
+        text-align: center;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.659);
+    }
 }
+
